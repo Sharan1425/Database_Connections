@@ -8,9 +8,14 @@ myconnection  = mysql.connector.connect(
 )
 
 Dbconnection = myconnection.cursor()
-sql_query1 = "insert into my_info values(4,'Chey',25,'Atp')"
-Dbconnection.execute(sql_query1)
-myconnection.commit()
+try:
+    sql_query1 = "insert into my_info values(10,'Sai',25,'Atp')"
+    Dbconnection.execute(sql_query1)
+    myconnection.commit()
+except:
+    print("Data is not inserted")
 
-print("Record is inserted successfully")
-myconnection.close()
+finally:
+
+    print("Record is inserted successfully")
+    myconnection.close()
