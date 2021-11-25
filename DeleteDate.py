@@ -18,3 +18,6 @@ Dbconnection.execute(sql_query)
 myconnection.commit()
 
 print("Record has been deleted successfully")
+
+
+"New line added..."
